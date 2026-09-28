@@ -41,7 +41,7 @@ jobs:
           node-version: 24.x
       - run: pnpm run prettier:check
       - run: pnpm run typecheck
-      - run: pnpm exec eslint extensions packages --quiet
+      - run: pnpm run lint
       - run: pnpm run build
       - run: pnpm run smoke:packages
       - run: pnpm --dir packages/website run build
